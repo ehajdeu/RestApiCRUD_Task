@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        td {
+            padding: 5px;
+            border: solid 1px lightslategrey;
+        }
+
+        button {
+            background-color: lightslategrey;
+            color: white;
+            padding: 4px 4px;
+            margin: 3px 3px;
+            cursor: pointer;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+<p></p>
+<h1 align="center" style="margin-top: 50px;">List of doctors</h1>
+<p></p>
+<div id="add-div" align="center" style="visibility: hidden;">
+    <input id="doctorId" type="hidden" name="doctorId" value=""/>
+    <label for="firstName">First name: </label>
+    <input id="firstName" type="text">
+    <label for="lastName">Last name: </label>
+    <input id="lastName" type="text">
+    <label for="specialty">Specialty: </label>
+    <input id="specialty" type="text">
+    <label for="officeNumber">Of.nr.: </label>
+    <input id="officeNumber" type="number" max="20" min="1">
+    <button id="add-doctor-submit">Submit</button>
+</div>
+<p></p>
+<button id="add" style="margin-left: 480px">Add new doctor</button>
+<div id="doctors-div">
+    <table id="doctors-placeholder" align="center">
+        <thead style="background-color: lightslategrey">
+        <td><h4>Nr.</h4></td>
+        <td><h4>First Name</h4></td>
+        <td><h4>Last Name</h4></td>
+        <td><h4>Specialty</h4></td>
+        <td><h4>Office nr.</h4></td>
+        <td><h4>Update</h4></td>
+        <td><h4>Delete</h4></td>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+<script src="js/doctors.js"></script>
+<script src="js/addUpdateDoctor.js"></script>
+</body>
+</html>
+

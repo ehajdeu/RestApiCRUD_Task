@@ -13,7 +13,7 @@ public class DoctorDTO {
     private String firstName;
     private String lastName;
     private String specialty;
-    private int officeNumber;
+    private Long officeNumber;
 
     public DoctorDTO(Doctor doctor) {
         this.id = doctor.getId();

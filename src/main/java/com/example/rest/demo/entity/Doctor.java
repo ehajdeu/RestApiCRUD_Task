@@ -1,11 +1,9 @@
 package com.example.rest.demo.entity;
 
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "doctor")
@@ -15,24 +13,20 @@ public class Doctor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    @NotEmpty (message = "First name may not be empty")
-    @Size(min = 3, max = 15)
+    @Column(name = "first_name")
     private String firstName;
 
-    @NotEmpty (message = "Last name may not be empty")
-    @Size(min = 3, max = 15)
+    @Column(name = "last_name")
     private String lastName;
 
-    @NotEmpty (message = "Specialty may not be empty")
-    @Size(min = 3, max = 50)
+    @Column(name = "specialty")
     private String specialty;
 
-    @NotNull
-    @Min(1)
-    @Max(20)
-    private int officeNumber;
+    @Column(name = "office_number")
+    private Long officeNumber;
 
 public Doctor(DoctorDTO doctorDTO){
     this.id = doctorDTO.getId();
